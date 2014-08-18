@@ -1,0 +1,11 @@
+<% if @posts.any? %>
+	<% @posts.each do |post|%>
+		<%= post.title %>
+		<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+	<% end %>
+<%else%>
+	No post yet
+<% end %>
+
+<%= render "post_form" %>
+<%= link_to 'Add post',  new_post_path %>
