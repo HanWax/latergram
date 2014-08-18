@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 describe 'post' do
+
+	before(:each) do 
+			alex = User.create(email: "a@a.com", username: 'bob', password: "123456789", password_confirmation: "123456789")
+			login_as("a@a.com", 'bob', "123456789")
+		end 
+		
 	context 'no post' do
 		it 'shows no post' do
 			visit('/')

@@ -52,3 +52,7 @@ gem 'hirb'
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
+
+# Devise
+
+gem 'devise'
