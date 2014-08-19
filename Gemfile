@@ -60,3 +60,4 @@ gem 'devise'
 # For deployment to heroku
 
 gem 'rails_12factor'
+gem 'heroku_secrets'
