@@ -35,5 +35,14 @@ describe 'post' do
 			expect(page).to have_css('img.uploaded-pic')
 			expect(page).to have_link('Add post')
 		end 
+
+		it 'displays no image, if no picture attached' do
+      		visit '/'
+      		fill_in 'post_title', with: 'No image'
+      		click_button 'Add post'
+      		expect(page).not_to have_css 'img.uploaded-pic'
+    	end
 	end 
+
+
 end
