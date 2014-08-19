@@ -55,7 +55,7 @@ gem 'aws-sdk'
 
 # Devise
 
-gem 'devise'
+gem 'devise', group: :production
 
 # For deployment to heroku
 
