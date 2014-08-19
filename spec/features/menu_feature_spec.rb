@@ -22,7 +22,6 @@ describe 'menu display' do
 
 		it 'display sign out' do
 			visit('/')
-			save_and_open_page
 			expect(page).to have_content('Sign out')
 		end
 	end

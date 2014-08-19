@@ -18,7 +18,6 @@ describe 'post' do
 	context 'with post' do
 		it 'shows post' do
 			visit('/')
-			save_and_open_page
 			fill_in 'post_title', with: "bob"
 			click_button('Add post')
 			expect(page).to have_content('bob')

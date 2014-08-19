@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 	end 
 
 	def create
-		@new_post = Post.new(params[:post].permit(:title, :picture))
+		@new_post = Post.new(params[:post].permit(:title, :picture, :tag_list))
 		@new_post.save
 		redirect_to '/'
 	end

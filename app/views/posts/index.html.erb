@@ -1,6 +1,11 @@
 <% if @posts.any? %>
 	<% @posts.each do |post|%>
 		<%= post.title %>
+
+		 <% post.tags.each do |tag| %>
+      	<%= link_to tag.text, '#' %>
+    	<% end %>
+
 		<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
 	<% end %>
 <%else%>
