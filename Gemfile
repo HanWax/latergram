@@ -56,3 +56,7 @@ gem 'aws-sdk'
 # Devise
 
 gem 'devise'
+
+# For deployment to heroku
+
+gem 'rails_12factor'
