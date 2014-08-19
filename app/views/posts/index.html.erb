@@ -3,7 +3,7 @@
 		<%= post.title %>
 
 		 <% post.tags.each do |tag| %>
-      	<%= link_to tag.text, '#' %>
+      	<%= link_to tag.text, tag_path(tag) %>
     	<% end %>
 
 		<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>

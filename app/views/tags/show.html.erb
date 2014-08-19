@@ -1,0 +1,6 @@
+<h1>Posts tagged with: </h1>
+
+<% @tags.posts.each do |tag| %>
+	<%= tag.title %>
+	<%= image_tag tag.picture.url(:medium), class: 'uploaded-pic' %>
+<% end %>
