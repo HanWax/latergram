@@ -33,5 +33,10 @@ describe 'filtering by tags' do
 			expect(page).to have_content 'Amazon Bob'
 			expect(page).not_to have_content 'Amazing Bob'
 		end 
+
+		it 'displays tags by pretty URLs' do 
+			visit '/tags/amazon'
+			expect(page).to have_content('Amazon Bob')
+		end 
 	end 
 end 
