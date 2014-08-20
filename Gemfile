@@ -62,8 +62,11 @@ gem 'devise'
 gem 'rails_12factor'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
-
-
+# For styling with Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap_form'
+gem 'bootstrap-tagsinput-rails'
+gem 'less-rails'
+gem 'therubyracer'
+
