@@ -62,7 +62,7 @@ gem 'devise'
 gem 'rails_12factor'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
-# Styling the website with Bootstrap
+
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
