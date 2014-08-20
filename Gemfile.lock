@@ -45,10 +45,15 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (2.2.0.20140804)
+      execjs
     aws-sdk (1.51.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.7)
+    bootstrap-sass (3.2.0.1)
+      sass (~> 3.2)
+    bootstrap_form (2.1.1)
     builder (3.2.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -76,6 +81,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
+    factory_girl (4.4.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
+      railties (>= 3.0.0)
     hike (1.2.3)
     hirb (0.7.2)
     i18n (0.6.11)
@@ -185,10 +195,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   aws-sdk
+  bootstrap-sass (~> 3.2.0)
+  bootstrap_form
   capybara
   coffee-rails (~> 4.0.0)
   devise
+  factory_girl_rails
   heroku_secrets!
   hirb
   jbuilder (~> 2.0)

@@ -43,7 +43,7 @@ group :development, :test do
 	gem 'capybara'
 	gem 'rspec-collection_matchers'
 	gem 'launchy'
-
+	gem 'factory_girl_rails'
 end 
 
 gem 'hirb'
@@ -55,9 +55,15 @@ gem 'aws-sdk'
 
 # Devise
 
-gem 'devise', group: :production
+gem 'devise'
 
 # For deployment to heroku
 
 gem 'rails_12factor'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
+# Styling the website with Bootstrap
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'bootstrap_form'

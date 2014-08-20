@@ -1,14 +1,16 @@
-<%= form_for @new_post, html: { multipart: true } do |f| %>
+<section class='add_post col-md-3'>
 
-	<%= f.label :title %>
+<%= bootstrap_form_for @new_post, html: { multipart: true } do |f| %>
+
 	<%= f.text_field :title %>
 
-	<%= f.label :picture %>
-	<%= f.file_field :picture %>
-
-	<%= f.label :tag_list, 'Hashtag' %> 
 	<%= f.text_field :tag_list %>
+
+	<%= f.file_field :picture %>
 
 	<%= f.submit 'Add post' %>
 
 <% end %>
+
+<section>
+

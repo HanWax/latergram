@@ -1,7 +1,9 @@
-<% if @posts.any? %>
-	<%= render @posts %>
-<%else%>
-	No post yet
-<% end %>
-
-<%= render "post_form" %>
+<section>
+	<% if @posts.any? %>
+		<%= render @posts %>
+	<%else%>
+		No post yet
+	<% end %>
+</section>
+<br>
+<section><%= render "post_form" %></section>
