@@ -25,8 +25,17 @@
 	<header class="container">
 		<nav class="header">
 			<ul class="nav nav-pills pull-right">
-				<li> <%= link_to 'Home', root_path %></li>
-				<li> <%= link_to 'Sign in', new_user_session_path %></li>
+				<li> <%= link_to(root_path) do %>
+				<span class="glyphicon glyphicon-home"></span>
+					Home
+				<% end %>
+				</li>
+
+				<li> <%= link_to(new_user_session_path) do %>
+				<span class="glyphicon glyphicon-user"></span>
+					Sign in
+				<% end %>
+				</li>
 			</ul>
 			<h3 class="text-muted">Latergram</h3>
 		</nav>
@@ -36,7 +45,11 @@
       <div class="jumbotron">
         <h1>The number one photo sharing site</h1>
         <p class="lead">Why post now when you can post later</p>
-        <p> <%= link_to 'Sign up today', new_user_registration_path, class:"btn btn-lg btn-success", role:"button" %></p>
+        <p> <%= link_to(new_user_registration_path, class:"btn btn-lg btn-success", role:"button") do %>
+				<span class="glyphicon glyphicon-camera"></span>
+					Sign up today
+				<% end %>
+		</p>
       </div>
 		 	<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
@@ -53,7 +66,4 @@
 </html>
 
 
-<%= link_to(new_post_path, class: 'new-post') do %>
-<span class="glyphicon glyphicon-camera"></span>
-New Post
-<% end %>
+
