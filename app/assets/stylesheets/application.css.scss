@@ -55,7 +55,7 @@ color: #343642;
 }
 
 .btn-success {
-color: white;
+color: #F2EBC7;
 background-color: #962D3E;
 border-color: #962D3E;
 }
@@ -120,11 +120,6 @@ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-.panel-body {
-	padding: 0px;
-	border: 2px solid #343642;
-}
-
 .form-group {
 margin-bottom: 15px;
 margin-left: 15%;
@@ -136,4 +131,57 @@ background-color: #962D3E;
 border-color: #962D3E;
 margin-left: 15%;
 margin-bottom: 20px;
+}
+
+.panel-body {
+padding: 5px;
+background-color: #343642;
+}
+
+.panel-default > .panel-heading {
+color: #333333;
+background-color: #979C9C;
+border-color: #979C9C;
+}
+
+.panel-footer {
+padding: 10px 15px;
+background-color: #979C9C;
+border-color: #979C9C;
+border-top: 1px solid #979C9C;
+border-bottom-right-radius: 3px;
+border-bottom-left-radius: 3px;
+
+}
+
+.panel-heading {
+padding: 2px 15px;
+border-bottom: 1px solid transparent;
+border-top-right-radius: 3px;
+border-top-left-radius: 3px;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+color: #F2EBC7;
+background-color: #979C9C;
+border-color: #979C9C;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+text-decoration: none;
+background-color: #962D3E;
+color: #F2EBC7;
+}
+
+.nav-pills > li > a {
+border-radius: 4px;
+background-color: #979C9C;
+border-radius: 5px;
+margin-bottom: 3px;
+}
+
+a:hover, a:focus {
+color: #F2EBC7;
+text-decoration: none;
+background-color: #348899;
 }
