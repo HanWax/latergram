@@ -43,7 +43,7 @@ group :development, :test do
 	gem 'capybara'
 	gem 'rspec-collection_matchers'
 	gem 'launchy'
-
+	gem 'factory_girl_rails'
 end 
 
 gem 'hirb'
@@ -62,3 +62,8 @@ gem 'devise'
 gem 'rails_12factor'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
+
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'bootstrap_form'
