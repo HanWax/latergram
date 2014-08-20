@@ -196,3 +196,20 @@ color: #F2EBC7;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 background-color: #F2EBC7;
 }
+
+.btn-primary {
+color: #F2EBC7;
+background-color: #F2EBC7;
+border-color: #F2EBC7;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+color: #F2EBC7;
+background-color: #F2EBC7;
+border-color: #F2EBC7;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
+color: #F2EBC7;
+background-color: #962D3E;
+}
