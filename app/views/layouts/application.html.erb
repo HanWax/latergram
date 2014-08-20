@@ -45,11 +45,18 @@
       <div class="jumbotron">
         <h1>The number one photo sharing site</h1>
         <p class="lead">Why post now when you can post later</p>
-        <p> <%= link_to(new_user_registration_path, class:"btn btn-lg btn-success", role:"button") do %>
-				<span class="glyphicon glyphicon-camera"></span>
-					Sign up today
-				<% end %>
+
+        <p> <%= link_to('#', class:"btn btn-lg btn-success", role:"button", data: {toggle: "modal", target: "#myModal" }) do %>
+			<span class="glyphicon glyphicon-camera"></span>
+				Add post
+			<% end %>
+	
+			<%= link_to(new_user_registration_path, class:"btn btn-lg btn-success", role:"button") do %>
+			<span class="glyphicon glyphicon-pencil"></span>
+				Sign up today
+			<% end %>
 		</p>
+
       </div>
 		 	<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
@@ -61,9 +68,32 @@
       </div>
      
     </div> 
-
   </body>
 </html>
+    
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Upload latergram now</h4>
+      </div>
+      <div class="modal-body">
+			<%= bootstrap_form_for @new_post, html: { multipart: true } do |f| %>
 
+			<%= f.text_field :title %>
+
+			<%= f.text_field :tag_list, data:{role:'tagsinput'} %>
+
+			<%= f.file_field :picture %>	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><%= f.submit 'Add post' %></button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
