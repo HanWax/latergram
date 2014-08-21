@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
          
  		<title>Latergram</title>
   </head>
@@ -164,7 +162,8 @@
     </div>
   </div>
 </div>
- 
+ <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>
     
