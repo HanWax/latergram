@@ -18,7 +18,7 @@
 				<li class="active"> <%= link_to 'Home', root_path %></li>
 				<li> <%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 			</ul>
-			<h3 class="text-muted">Latergram</h3>
+			<h3 class="text-muted">.Latergram</h3>
 		</nav>
 	</header>
 <% else %>
@@ -30,11 +30,10 @@
 					Home
 				<% end %>
 				</li>
-
-				<li> <%= link_to(new_user_session_path) do %>
-				<span class="glyphicon glyphicon-user"></span>
-					Sign in
-				<% end %>
+		   		<li> <%= link_to('#', class:"btn btn-lg btn-success", role: "button", data: {toggle: "modal", target: "#signinModal" }) do %>
+					<span class="glyphicon glyphicon-user"></span>
+						Sign in
+					<% end %>
 				</li>
 			</ul>
 			<h3 class="text-muted">Latergram</h3>
@@ -51,7 +50,7 @@
 				Add post
 			<% end %>
 	
-			<%= link_to(new_user_registration_path, class:"btn btn-lg btn-success", role:"button") do %>
+        <p> <%= link_to('#', class:"btn btn-lg btn-success", role:"button", data: {toggle: "modal", target: "#signupModal" }) do %>
 			<span class="glyphicon glyphicon-pencil"></span>
 				Sign up today
 			<% end %>
@@ -68,24 +67,25 @@
       </div>
      
     </div> 
-  </body>
-</html>
-    
+
+
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  	<div class="modal-dialog">
+    <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Upload latergram now</h4>
+
+        <h4 class="modal-title" id="myModalLabel">Upload .latergram now</h4>
       </div>
       <div class="modal-body">
-			<%= bootstrap_form_for @new_post, html: { multipart: true } do |f| %>
+      <%= bootstrap_form_for @new_post, html: { multipart: true } do |f| %>
 
-			<%= f.text_field :title %>
+      <%= f.text_field :title %>
 
-			<%= f.text_field :tag_list, data:{role:'tagsinput'} %>
+      <%= f.text_field :tag_list, data: {role:'tagsinput'} %>
 
-			<%= f.file_field :picture %>	
+      <%= f.file_field :picture %>  
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -95,5 +95,75 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+        <h4 class="modal-title" id="myModalLabel">Sign up today</h4>
+      </div>
+      <div class="modal-body">
+
+    <%= bootstrap_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
+
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %></div>
+
+      <div><%= f.label :username %><br />
+      <%= f.text_field :username, autofocus: true %></div>
+
+      <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %></div>
+
+      <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><%= f.submit 'Sign up' %></button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+ <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+        <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+      </div>
+      <div class="modal-body">
+
+    <%= bootstrap_form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
+
+    <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %></div>
+
+      <div><%= f.label :username %><br />
+      <%= f.text_field :username, autofocus: true %></div>
+
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><%= f.submit 'Sign in' %></button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
+    
 
 
