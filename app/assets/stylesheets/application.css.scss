@@ -213,3 +213,13 @@ border-color: #F2EBC7;
 color: #F2EBC7;
 background-color: #962D3E;
 }
+
+btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+color: #F2EBC7;
+background-color: #979C9C;
+border-color: #979C9C;
+}
+
+.new_post .bootstrap-tagsinput {
+	display: block;
+}
