@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(params[:post].permit(:title, :picture, :tag_list, :address))
+		@post.user = current_user
 		@post.save
 		redirect_to '/'
 	end
@@ -16,4 +17,7 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 	end
 
+	def edit
+		@post = Post.find(params[:user_id])
+	end 
 end

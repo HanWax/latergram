@@ -1,15 +1,14 @@
 <section class='container col-md-4'>
 
 <div class="panel panel-default">
-  <div class="panel-heading"><h3><%= post.title %></h3></div>
+  <div class="panel-heading"><h3><%= post.title %></h3>
+  Taken at <%= link_to post.address, post_map_path(post) %> by <%= link_to User.find(post.user_id).username,  edit_user_post_path(post)  %> </div>
   <div class="panel-body">
     <% if post.picture.present? %>
 	  <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
 	<% end %>
   </div>
   <div class="panel-footer">
-
-    <%= link_to post.address, post_map_path(post) %>
 
 	<% post.tags.each do |tag| %>
 	  <%= link_to tag.text, tag %>

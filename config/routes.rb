@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resource :map
  end 
 
+ resources :users do 
+  resource :post
+end 
+
   resources :tags
   
   # The priority is based upon order of creation: first created -> highest priority.
