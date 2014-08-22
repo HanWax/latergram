@@ -108,19 +108,16 @@
       <div class="modal-body">
 
     <%= bootstrap_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
-
-      <div><%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %></div>
-
-      <div><%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true %></div>
-
-      <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %></div>
-
-      <div><%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
+    <br />
+      <%= f.email_field :email, autofocus: true %>
+    <br />
+      <%= f.text_field :username, autofocus: true %>
+       <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i>
+       <% end %>
+       <br/>
+        <%= f.password_field :password, autocomplete: "off" %>
+<br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -143,16 +140,12 @@
       <div class="modal-body">
 
     <%= bootstrap_form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
-
-    <div><%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %></div>
-
-      <div><%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true %></div>
-
-      <div><%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %></div>
-    
+<br />
+      <%= f.email_field :email, autofocus: true %>
+<br />
+      <%= f.text_field :username, autofocus: true %>
+<br />
+      <%= f.password_field :password, autocomplete: "off" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
