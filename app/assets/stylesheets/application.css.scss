@@ -308,9 +308,17 @@ div.panel-footer {
 
 section.add_post.col-md-3 {
 	a {
-		margin-bottom: 100px;
+	background-color: #F2EBC7;
+	color: #343642;
+	text-decoration: underline;
+	padding: 5px;
+	}
+
+	a:hover {
+		font-weight: bold;
 	}
 }
+
 
 .radio label, .checkbox label {
 padding-left: 20px;
@@ -319,3 +327,27 @@ font-weight: normal;
 cursor: pointer;
 margin-left: 60px;
 }
+
+div.panel-footer {
+	a.like-link {
+	float: right;
+	background-color: gray;
+	font-size: 20px;
+	padding-bottom: none;
+	margin-top: -10px;
+}
+
+	a:hover, div.panel-footer a:focus {
+	color: #962D3E;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: gray;
+
+	}
+}
+
+span.like_count {
+	float: right;
+
+}
+
