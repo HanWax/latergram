@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:3000/posts/5/map -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link data-turbolinks-track="true" href="http://localhost:3000/assets/maps.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/posts.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/tags.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/application.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/rails_bootstrap_forms.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/bootstrap-tagsinput.css?body=1" media="all" rel="stylesheet">
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="nHuC15OKxD4K0tR1Bokw91NdmSQjd/0sn2glCdvK0zM=" name="csrf-token">
+         
+ 		<title>Latergram</title>
+  <style type="text/css"></style><script type="text/javascript" charset="UTF-8" src="./Latergram_files/{common,util,stats}.js"></script></head>
+
+  <body>
+
+	<header class="container">
+		<nav class="header">
+			<ul class="nav nav-pills pull-right">
+				<li> <a href="http://localhost:3000/">
+				<span class="glyphicon glyphicon-home"></span>
+					Home
+</a>				</li>
+		   		<li> <a class="btn btn-lg btn-success" data-target="#signinModal" data-toggle="modal" href="http://localhost:3000/posts/5/map#" role="button">
+					<span class="glyphicon glyphicon-user"></span>
+						Sign in
+</a>				</li>
+			</ul>
+			<h3 class="text-muted">Latergram</h3>
+		</nav>
+	</header>
+
+      <div class="jumbotron">
+        <h1>The number one photo sharing site</h1>
+        <p class="lead">Why post now when you can post later</p>
+
+        <p> <a class="btn btn-lg btn-success" data-target="#myModal" data-toggle="modal" href="http://localhost:3000/posts/5/map#" role="button">
+			<span class="glyphicon glyphicon-camera"></span>
+				Add post
+</a>	
+         <a class="btn btn-lg btn-success" data-target="#signupModal" data-toggle="modal" href="http://localhost:3000/posts/5/map#" role="button">
+			<span class="glyphicon glyphicon-pencil"></span>
+				Sign up today
+</a>		</p>
+
+      </div>
+		 	<p class="notice"></p>
+			<p class="alert"></p>
+
+      Show address here: Penguin Island
+
+<div id="map" data-id="5" <="" div="">
+
+
+		
+
+      <div class="footer">
+      
+      </div>
+     
+    </div> 
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+
+        <h4 class="modal-title" id="myModalLabel">Upload .latergram now</h4>
+      </div>
+      <div class="modal-body">
+      <form accept-charset="UTF-8" action="http://localhost:3000/posts" class="new_post" enctype="multipart/form-data" id="new_post" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="nHuC15OKxD4K0tR1Bokw91NdmSQjd/0sn2glCdvK0zM="></div>
+
+      <div class="form-group"><label class="control-label" for="post_title">Title</label><input class="form-control" id="post_title" name="post[title]" type="text"></div>
+
+      <div class="form-group"><label class="control-label" for="post_tag_list">Tag list</label><input class="form-control" data-role="tagsinput" id="post_tag_list" name="post[tag_list]" type="text" style="display: none;"><div class="bootstrap-tagsinput"><input size="1" type="text"></div></div>
+
+      <div class="form-group"><label class="control-label" for="post_address">Address</label><input class="form-control" id="post_address" name="post[address]" type="text"></div>
+
+      <div class="form-group"><label class="control-label" for="post_picture">Picture</label><input id="post_picture" name="post[picture]" type="file"></div>  
+      </form></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><input class="btn btn-default" name="commit" type="submit" value="Add post"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+
+        <h4 class="modal-title" id="myModalLabel">Sign up today</h4>
+      </div>
+      <div class="modal-body">
+
+    <form accept-charset="UTF-8" action="http://localhost:3000/users" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="nHuC15OKxD4K0tR1Bokw91NdmSQjd/0sn2glCdvK0zM="></div>
+    <br>
+      <div class="form-group"><label class="control-label" for="user_email">Email</label><input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value=""></div>
+    <br>
+      <div class="form-group"><label class="control-label" for="user_username">Username</label><input autofocus="autofocus" class="form-control" id="user_username" name="user[username]" type="text"></div>
+              <br>
+        <div class="form-group"><label class="control-label" for="user_password">Password</label><input autocomplete="off" class="form-control" id="user_password" name="user[password]" type="password"></div>
+<br>
+        <div class="form-group"><label class="control-label" for="user_password_confirmation">Password confirmation</label><input autocomplete="off" class="form-control" id="user_password_confirmation" name="user[password_confirmation]" type="password"></div>
+      </form></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><input class="btn btn-default" name="commit" type="submit" value="Sign up"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+
+        <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+      </div>
+      <div class="modal-body">
+
+    <form accept-charset="UTF-8" action="http://localhost:3000/users/sign_in" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="nHuC15OKxD4K0tR1Bokw91NdmSQjd/0sn2glCdvK0zM="></div>
+<br>
+      <div class="form-group"><label class="control-label" for="user_email">Email</label><input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value=""></div>
+<br>
+      <div class="form-group"><label class="control-label" for="user_username">Username</label><input autofocus="autofocus" class="form-control" id="user_username" name="user[username]" type="text"></div>
+<br>
+      <div class="form-group"><label class="control-label" for="user_password">Password</label><input autocomplete="off" class="form-control" id="user_password" name="user[password]" type="password"></div>
+      </form></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><input class="btn btn-default" name="commit" type="submit" value="Sign in"></button>
+      </div>
+    </div>
+  </div>
+</div>
+ <script src="./Latergram_files/js" type="text/javascript"></script><script src="./Latergram_files/main.js" type="text/javascript"></script>
+    <script data-turbolinks-track="true" src="./Latergram_files/jquery.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/jquery_ujs.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/affix.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/alert.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/button.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/carousel.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/collapse.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/dropdown.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/tab.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/transition.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/scrollspy.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/modal.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/tooltip.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/popover.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/bootstrap-sprockets.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/bootstrap-tagsinput.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/gmaps.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/maps.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/posts.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/tags.js"></script>
+<script data-turbolinks-track="true" src="./Latergram_files/application.js"></script>
+  
+
+    
+
+
+</body></html>

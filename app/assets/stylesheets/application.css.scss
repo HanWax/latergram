@@ -178,6 +178,7 @@ color: #F2EBC7;
 background-color: #979C9C;
 border-radius: 6px;
 margin-bottom: 3px;
+font-weight: bold;
 }
 
 a:hover, a:focus {
@@ -195,6 +196,16 @@ color: #F2EBC7;
 .modal-content {
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 background-color: #F2EBC7;
+}
+
+div.panel-heading {
+	a {
+		font-style: italic;
+		text-decoration: underline;
+		background-color: #979C9C;
+		padding: 0px 2px;
+		font-size: 14px;
+	}
 }
 
 .btn-primary {
@@ -232,4 +243,79 @@ width: 500px;
 
 form {
 margin-right: 60px;
+}
+
+span.address {
+margin-left: 50px;
+font-weight: bold;
+color: #343642;
+font-size: 18px;
+}
+
+h2, .h2 {
+font-size: 30px;
+margin-left: 20px;
+font-weight: bold;
+color: #343642;
+font-size: 18px;
+margin-top: 2px;
+}
+
+form {
+width: 400px;
+color: #343642;
+}
+
+p {
+margin: 10px 10px 10px;
+color: #343642;
+font-weight: bold;
+font-size: 18px;
+}
+
+span.tag.label.label-info {
+margin-right: 5px;
+color: #F2EBC7;
+border-radius: 6px;
+font-size: 13.5px;
+font-family: HelveticaNeue;
+}
+
+.nav-pills > li > a {
+background-color: #979C9C;
+border-radius: 6px;
+margin-bottom: 3px;
+border: none;
+height: 40px;
+font-size: 15px;
+}
+
+btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
+color: #F2EBC7;
+background-color: #962D3E;
+border-color: #962D3E;
+}
+
+div.panel-footer {
+	a:hover, a:focus {
+	color: #F2EBC7;
+	text-decoration: none;
+	background-color: #962D3E;
+	font-size: 14.5px;
+	}
+}
+
+
+section.add_post.col-md-3 {
+	a {
+		margin-bottom: 100px;
+	}
+}
+
+.radio label, .checkbox label {
+padding-left: 20px;
+margin-bottom: 0;
+font-weight: normal;
+cursor: pointer;
+margin-left: 60px;
 }
