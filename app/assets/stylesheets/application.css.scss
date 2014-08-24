@@ -243,6 +243,8 @@ width: 500px;
 
 form {
 margin-right: 60px;
+width: 400px;
+color: #343642;
 }
 
 span.address {
@@ -259,11 +261,6 @@ font-weight: bold;
 color: #343642;
 font-size: 18px;
 margin-top: 2px;
-}
-
-form {
-width: 400px;
-color: #343642;
 }
 
 p {
@@ -349,5 +346,20 @@ div.panel-footer {
 span.like_count {
 	float: right;
 
+}
+	h1.tags {
+	font-size: 20px;
+	margin-left: 20px;
+	margin-top: -30px;
+	margin-bottom: 20px;
+	color: #343642;
+	}
+
+span.no_post {
+	font-size: 20px;
+	font-weight: bold;
+	color: #343642;
+	margin-top: -500px;
+	margin-left: 50px;
 }
 
