@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-         
  		<title>Latergram</title>
   </head>
 
@@ -45,17 +44,17 @@
         <p class="lead">Why post now when you can post later</p>
 
         <p> <%= link_to('#', class:"btn btn-lg btn-success", role:"button", data: {toggle: "modal", target: "#myModal" }) do %>
-			<span class="glyphicon glyphicon-camera"></span>
-				Add post
-			<% end %>
+			     <span class="glyphicon glyphicon-camera"></span>
+				    Add post
+			  <% end %>
 	
          <%= link_to('#', class:"btn btn-lg btn-success", role:"button", data: {toggle: "modal", target: "#signupModal" }) do %>
-			<span class="glyphicon glyphicon-pencil"></span>
-				Sign up today
-			<% end %>
-		</p>
-
+			     <span class="glyphicon glyphicon-pencil"></span>
+				    Sign up today
+			   <% end %>
+		    </p>
       </div>
+
 		 	<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
 
@@ -65,10 +64,12 @@
       <%= render "layouts/sign_in" %>
 
       <div class="footer">
-      
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       </div>
-     
-    </div> 
+      
+  </body>
+</html>
+
 
     
 

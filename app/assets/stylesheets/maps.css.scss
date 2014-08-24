@@ -3,7 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #map {
-	width: 800px;
-	height: 800px;
+	width: 600px;
+	height: 600px;
 	margin: 50px;
+}
+
+div.gm-style a {
+	background-color: white;
+	opacity: 0;
 }
