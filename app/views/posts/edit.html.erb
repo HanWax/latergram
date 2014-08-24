@@ -1,2 +1,2 @@
-<h1 class='tags'>Posts uploaded by: <%= User.find(@post.user_id).username %> </h1>
+<h1 class='tags'><%= User.find(@post.user_id).username %>'s photos </h1>
 <%= render @post %>

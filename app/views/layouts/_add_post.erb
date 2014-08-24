@@ -1,0 +1,29 @@
+<!-- Add post modal partial -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+        <h4 class="modal-title" id="myModalLabel">Upload .latergram now</h4>
+      </div>
+      <div class="modal-body">
+      <%= bootstrap_form_for @new_post, html: { multipart: true } do |f| %>
+
+      <%= f.text_field :title %>
+
+      <%= f.text_field :tag_list, data: {role:'tagsinput'} %>
+
+      <%= f.text_field :address %>
+
+      <%= f.file_field :picture %>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><%= f.submit 'Add post' %></button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

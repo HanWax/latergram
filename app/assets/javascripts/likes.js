@@ -1,5 +1,8 @@
 $(document).ready(function(){
 	$('.like-link').on('click', function(event){
-	console.log('hi')
+	event.preventDefault():
+	$.post(this.href, function(response){
+		alert(response.new_like_count);
+	});
 	})
 })
