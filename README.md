@@ -42,7 +42,7 @@ Alex Zn
 
 Next steps
 ----------
-* Styling using Bootstrap
+* Further styling using Bootstrap
 
 
 
